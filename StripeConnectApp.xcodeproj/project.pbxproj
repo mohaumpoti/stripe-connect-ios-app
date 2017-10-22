@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		90D26AA41F978FB200368CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D26AA31F978FB200368CB4 /* AppDelegate.swift */; };
-		90D26AA61F978FB200368CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D26AA51F978FB200368CB4 /* ViewController.swift */; };
 		90D26AA91F978FB200368CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D26AA71F978FB200368CB4 /* Main.storyboard */; };
 		90D26AAB1F978FB200368CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D26AAA1F978FB200368CB4 /* Assets.xcassets */; };
-		90D26AAE1F978FB200368CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D26AAC1F978FB200368CB4 /* LaunchScreen.storyboard */; };
 		90D26AB91F978FB200368CB4 /* StripeConnectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D26AB81F978FB200368CB4 /* StripeConnectAppTests.swift */; };
 		90D26AC41F978FB200368CB4 /* StripeConnectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D26AC31F978FB200368CB4 /* StripeConnectAppUITests.swift */; };
+		90D26AD21F9791AD00368CB4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D26AD11F9791AD00368CB4 /* MainViewController.swift */; };
+		90D26AD41F9791C900368CB4 /* StripeConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D26AD31F9791C900368CB4 /* StripeConnectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,8 @@
 /* Begin PBXFileReference section */
 		90D26AA01F978FB100368CB4 /* StripeConnectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StripeConnectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D26AA31F978FB200368CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90D26AA51F978FB200368CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90D26AA81F978FB200368CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90D26AAA1F978FB200368CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90D26AAD1F978FB200368CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D26AAF1F978FB200368CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90D26AB41F978FB200368CB4 /* StripeConnectAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeConnectAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D26AB81F978FB200368CB4 /* StripeConnectAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeConnectAppTests.swift; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		90D26ABF1F978FB200368CB4 /* StripeConnectAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeConnectAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D26AC31F978FB200368CB4 /* StripeConnectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeConnectAppUITests.swift; sourceTree = "<group>"; };
 		90D26AC51F978FB200368CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D26AD11F9791AD00368CB4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		90D26AD31F9791C900368CB4 /* StripeConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StripeConnectViewController.swift; path = ../StripeConnectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +97,11 @@
 		90D26AA21F978FB100368CB4 /* StripeConnectApp */ = {
 			isa = PBXGroup;
 			children = (
+				90D26AD11F9791AD00368CB4 /* MainViewController.swift */,
+				90D26AD31F9791C900368CB4 /* StripeConnectViewController.swift */,
 				90D26AA31F978FB200368CB4 /* AppDelegate.swift */,
-				90D26AA51F978FB200368CB4 /* ViewController.swift */,
 				90D26AA71F978FB200368CB4 /* Main.storyboard */,
 				90D26AAA1F978FB200368CB4 /* Assets.xcassets */,
-				90D26AAC1F978FB200368CB4 /* LaunchScreen.storyboard */,
 				90D26AAF1F978FB200368CB4 /* Info.plist */,
 			);
 			path = StripeConnectApp;
@@ -232,7 +232,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D26AAE1F978FB200368CB4 /* LaunchScreen.storyboard in Resources */,
 				90D26AAB1F978FB200368CB4 /* Assets.xcassets in Resources */,
 				90D26AA91F978FB200368CB4 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D26AA61F978FB200368CB4 /* ViewController.swift in Sources */,
 				90D26AA41F978FB200368CB4 /* AppDelegate.swift in Sources */,
+				90D26AD41F9791C900368CB4 /* StripeConnectViewController.swift in Sources */,
+				90D26AD21F9791AD00368CB4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +302,6 @@
 				90D26AA81F978FB200368CB4 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		90D26AAC1F978FB200368CB4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90D26AAD1F978FB200368CB4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

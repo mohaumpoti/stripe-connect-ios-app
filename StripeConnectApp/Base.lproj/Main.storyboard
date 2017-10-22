@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AhQ-hu-EUq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Connect with Stripe-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="StripeConnectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELL-1s-TbH">
+                                <rect key="frame" x="94" y="317" width="187" height="33"/>
+                                <state key="normal" title="Button" image="blue-on-light"/>
+                                <connections>
+                                    <segue destination="eVV-xQ-KEn" kind="show" id="Jq1-4d-fEU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ELL-1s-TbH" secondAttribute="bottom" constant="317" id="3PD-Dq-1bH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ELL-1s-TbH" secondAttribute="trailing" constant="78" id="Dy8-46-lEL"/>
+                            <constraint firstItem="ELL-1s-TbH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78" id="Jw7-4A-zYP"/>
+                            <constraint firstItem="ELL-1s-TbH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="253" id="kq6-vG-CUk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Connect with Stripe" id="c1F-Ow-zVp">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Yvu-Hl-ENZ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2230" y="149"/>
+        </scene>
+        <!--Stripe Connect View Controller-->
+        <scene sceneID="3f9-ZW-pxY">
+            <objects>
+                <viewController id="eVV-xQ-KEn" customClass="StripeConnectViewController" customModule="StripeConnectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MS3-Pr-j5e"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bhl-le-odJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y1E-AN-V3q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbh-37-3eV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dOU-wW-r2N">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dOU-wW-r2N" secondAttribute="trailing" constant="162" id="4TS-el-Q85"/>
+                            <constraint firstItem="Bhl-le-odJ" firstAttribute="top" secondItem="mbh-37-3eV" secondAttribute="bottom" id="Aae-hl-R3v"/>
+                            <constraint firstItem="mbh-37-3eV" firstAttribute="top" secondItem="Y1E-AN-V3q" secondAttribute="top" id="RCc-Cm-8Om"/>
+                            <constraint firstItem="mbh-37-3eV" firstAttribute="leading" secondItem="Y1E-AN-V3q" secondAttribute="leading" id="URa-Wm-v6F"/>
+                            <constraint firstAttribute="trailing" secondItem="mbh-37-3eV" secondAttribute="trailing" id="bJg-Yz-v9A"/>
+                            <constraint firstItem="dOU-wW-r2N" firstAttribute="top" secondItem="MS3-Pr-j5e" secondAttribute="bottom" constant="303" id="lEG-ha-8EK"/>
+                            <constraint firstItem="Bhl-le-odJ" firstAttribute="top" secondItem="dOU-wW-r2N" secondAttribute="bottom" constant="324" id="uMX-Cj-Ob5"/>
+                            <constraint firstItem="dOU-wW-r2N" firstAttribute="leading" secondItem="Y1E-AN-V3q" secondAttribute="leadingMargin" constant="161" id="ypc-sF-o7z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="dOU-wW-r2N" id="PDr-72-hx7"/>
+                        <outlet property="webview" destination="mbh-37-3eV" id="ohr-vO-yo9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wn7-rh-ZBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3039.1999999999998" y="148.87556221889056"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6ef-XX-hzy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AhQ-hu-EUq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICK-wI-9Jr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="paP-PT-Mlm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxw-Bo-yrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426" y="149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue-on-light" width="190" height="33"/>
+    </resources>
 </document>
