@@ -68,14 +68,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dOU-wW-r2N" secondAttribute="trailing" constant="162" id="4TS-el-Q85"/>
                             <constraint firstItem="Bhl-le-odJ" firstAttribute="top" secondItem="mbh-37-3eV" secondAttribute="bottom" id="Aae-hl-R3v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dOU-wW-r2N" secondAttribute="trailing" constant="162" id="Jql-2h-zaC"/>
+                            <constraint firstItem="Bhl-le-odJ" firstAttribute="top" secondItem="dOU-wW-r2N" secondAttribute="bottom" constant="324" id="MXu-zh-swp"/>
+                            <constraint firstItem="dOU-wW-r2N" firstAttribute="top" secondItem="MS3-Pr-j5e" secondAttribute="bottom" constant="259" id="NaK-C4-YGe"/>
                             <constraint firstItem="mbh-37-3eV" firstAttribute="top" secondItem="Y1E-AN-V3q" secondAttribute="top" id="RCc-Cm-8Om"/>
                             <constraint firstItem="mbh-37-3eV" firstAttribute="leading" secondItem="Y1E-AN-V3q" secondAttribute="leading" id="URa-Wm-v6F"/>
                             <constraint firstAttribute="trailing" secondItem="mbh-37-3eV" secondAttribute="trailing" id="bJg-Yz-v9A"/>
-                            <constraint firstItem="dOU-wW-r2N" firstAttribute="top" secondItem="MS3-Pr-j5e" secondAttribute="bottom" constant="303" id="lEG-ha-8EK"/>
-                            <constraint firstItem="Bhl-le-odJ" firstAttribute="top" secondItem="dOU-wW-r2N" secondAttribute="bottom" constant="324" id="uMX-Cj-Ob5"/>
-                            <constraint firstItem="dOU-wW-r2N" firstAttribute="leading" secondItem="Y1E-AN-V3q" secondAttribute="leadingMargin" constant="161" id="ypc-sF-o7z"/>
+                            <constraint firstItem="dOU-wW-r2N" firstAttribute="leading" secondItem="Y1E-AN-V3q" secondAttribute="leadingMargin" constant="161" id="c7J-3L-wyp"/>
                         </constraints>
                     </view>
                     <connections>
